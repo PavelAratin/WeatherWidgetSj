@@ -3,6 +3,16 @@ const bodyTown = document.querySelector('.body__town span');
 const weatherApp = document.querySelector('.weather');
 const btns = document.querySelectorAll('.footer__btns-btn');
 
+var days = [
+  'Воскресенье',
+  'Понедельник',
+  'Вторник',
+  'Среда',
+  'Четверг',
+  'Пятница',
+  'Суббота',
+];
+
 select.addEventListener('change', function (e) {
   let town = e.target.value;
   bodyTown.innerHTML = e.target.value;
@@ -44,7 +54,8 @@ setInterval(time, 1000);
 btns.forEach(function (btn) {
   btn.addEventListener('click', function () {
     const currentCount = Number(this.dataset.count);
-    sort(currentCount)
+    sort(currentCount);
+    getDeysNumberWeek(currentCount);
   });
 });
 
@@ -60,8 +71,29 @@ function sort(currentCount) {
     <p class="footer__list-days-deg">+18°</p>
     <span class="footer__list-days-deg-feel">+15°</span>
     <span class="footer__list-days-weather">Облачно</span>
-  </li>
-    `
+  </li>    `
   }
   footerListDays.innerHTML = htmlContent;
+
 }
+
+function getDeysWeek() {
+  const footerListDays = document.querySelectorAll('.footer__list-days-day');
+  console.log(footerListDays)
+  let date = new Date();
+  let numberDate = date.getDay();
+  footerListDays.forEach(function (day, index) {
+    if (numberDate === index) {
+      day.innerHTML = 'Сегодня';
+    } else if (numberDate === index - 1) {
+      day.innerHTML = 'Завтра'
+    } else {
+      day.innerHTML = days[index];
+    }
+  });
+}
+
+getDeysWeek()
+
+
+
