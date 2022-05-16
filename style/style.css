@@ -18,9 +18,8 @@ li{
   list-style-type: none;
 }
 .weather-box {
-  overflow: hidden;
   background: #0d1117;
-  height: 100vh;
+  height: 100vw;
 }
 .weather {
   max-width: 1240px;
@@ -231,6 +230,7 @@ li{
 .footer__list-days{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 20px;
   background: #4F4F4F;
   box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
@@ -243,7 +243,7 @@ li{
   border-radius: 10px;
   padding: 11px;
   width: 13%;
-
+  margin-bottom: 10px;
 }
 .footer__list-days-day{
   margin-bottom: 7px;

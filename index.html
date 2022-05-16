@@ -51,6 +51,8 @@
               <option value="Гагарин">Гагарин</option>
               <option value="Москва">Москва</option>
               <option value="Лондон">Лондон</option>
+              <option value="Лондон">Симферополь</option>
+              <option value="Лондон">Коктебель</option>
             </select>
           </div>
         </div>
@@ -74,38 +76,38 @@
                 <img src="/img/termometr.svg" alt="Температура">
               </div>
               <span class="body__img-descr">Температура</span>
-              <span class="body__feel">20° - ощущается как 17°</span>
+              <span class="body__feel"><span class="body__temp-real">20°</span> - ощущается как <span class="body__temp-real-feel">17°</span></span>
             </li>
             <li class="body__item">
               <div class="body__img">
                 <img src="/img/davlenie.svg" alt="Давление">
               </div>
               <span class="body__img-descr">Давление</span>
-              <span class="body__feel">20° - ощущается как 17°</span>
+              <span class="body__feel body__feel--preasure">20° - ощущается как 17°</span>
             </li>
             <li class="body__item">
               <div class="body__img">
                 <img src="/img/osadci.svg" alt="Осадки">
               </div>
               <span class="body__img-descr">Осадки</span>
-              <span class="body__feel">Без осадков</span>
+              <span class="body__feel body__feel--precipitation">Без осадков</span>
             </li>
             <li class="body__item">
               <div class="body__img">
                 <img src="/img/veter.svg" alt="Ветер">
               </div>
               <span class="body__img-descr">Ветер</span>
-              <span class="body__feel">3 м/с юго-запад-лекгий ветер</span>
+              <span class="body__feel"><span class="body__wind">3</span> м/с юго-запад-лекгий ветер</span>
             </li>
           </ul>
         </div>
       </div>
       <div class="footer">
         <ul class="footer__btns footer__btns--margin">
-          <li class="footer__btns-item"><button class="footer__btns-btn">На неделю</button></li>
-          <li class="footer__btns-item"><button class="footer__btns-btn">На месяц</button></li>
-          <li class="footer__btns-item"><button class="footer__btns-btn">На 10 дней</button></li>
-          <li class="footer__btns-item footer__btns-item--margin"><button class="footer__btns-btn">Отменить</button></li>
+          <li class="footer__btns-item"><button class="footer__btns-btn" data-count="7">На неделю</button></li>
+          <li class="footer__btns-item"><button class="footer__btns-btn" data-count="31">На месяц</button></li>
+          <li class="footer__btns-item"><button class="footer__btns-btn" data-count="10">На 10 дней</button></li>
+          <li class="footer__btns-item footer__btns-item--margin"><button class="footer__btns-btn" data-count="7">Отменить</button></li>
         </ul>
         <ul class="footer__list-days">
           <li class="footer__list-days-item">
